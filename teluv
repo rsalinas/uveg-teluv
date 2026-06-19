@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+REAL_SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(dirname -- "$REAL_SCRIPT")"
+exec python3 "$SCRIPT_DIR/teluv.py" "$@"
